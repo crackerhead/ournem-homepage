@@ -172,13 +172,12 @@ $.i18n.init({
 		$('#extendedAttr').i18n();
 	});
 
-	// ##### Simple example 1 #####
-	// A simple example to get my latest tweet and write to a HTML element with
-	// id "example1". Also automatically hyperlinks URLS and user mentions and
-	// hashtags.
+	//**## NEM NEWS FEED ##**/
+	//Pulls twitter feed using twitter fetcher.
+	// Also automatically hyperlinks URLS and user mentions and hashtags.
 	var config1 = {
 		"id": '474290838172749825',//@nemcoin
-		"domId": 'example1',
+		"domId": 'newsFeed',
 		"maxTweets": 3,
 		"enableLinks": true,
 		"showUser": true,
