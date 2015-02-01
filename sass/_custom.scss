@@ -583,6 +583,83 @@ vertical-align: top;
       background-color: $green;
    }
 }
+//*** TWITTER FEED STYLINGS START ***//
+
+#newsFeed{
+   overflow:hidden;
+   margin-top: 5%;
+   margin-bottom: 70px;
+
+   ul{
+      margin-left: 0px !important;
+      padding-left: 0px !important;
+      margin-right: 0px !important;
+      padding-right: 0px !important;
+      @include row();
+      li{ //twitter boxes
+         padding: 4%;
+         background-color: white;
+         min-height: 400px;
+         @include column(4);
+         .tweet{
+            margin-top: 25%;
+            margin-bottom: 20%;
+            overflow: hidden !important;
+            }
+         a span{
+            color: $green !important;
+         }
+      }
+   }
+}
+.user a {
+   color: $darkestGray !important;
+}
+.user a span:first-of-type {
+   display:none;
+   margin-right:25px;
+   color: $darkestGray !important;
+}
+.user a span:last-of-type {
+   display: block;
+   margin-left:25px;
+   margin-top:7px;
+   font-size: 200%;
+   color: $darkestGray !important;
+}
+.tweet{
+   margin-top: 55px;
+
+}
+.timePosted{
+
+   margin-left: 15px;
+   color: $darkestGray !important;
+}
+.media img{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   max-height: 200px !important;
+   @include border-corner-radius(top, left, 5px);
+   @include border-corner-radius(top, right, 30px);
+   @include border-corner-radius(bottom, left, 30px);
+   @include border-corner-radius(bottom, right, 5px);
+}
+.user img{
+   margin-left: 15px;
+   float:left;
+}
+.user a > span {
+   float:left;
+}
+.tweet{
+   color: $darkestGray !important;
+}
+.tweet a{
+   color: $green !important;
+}
+//*** TWITTER FEED STYLINGS END ***//
 #footer{
    text-align: left;
    background-color: $darkGray;
@@ -590,6 +667,7 @@ vertical-align: top;
    color: $white;
    a{
       color: $white;
+      @include transition(all .6s);
       &:hover{
          color: $green;
       }
@@ -722,7 +800,8 @@ vertical-align: top;
 }
 */
 /* BUTTON STYLING END */
-// MOBILE STYLES START
+// MOBILE STYLES START =================
+// MOBILE STYLES START =================
 #headerSlideContainer {
    @include hidden(all-phones);
    @include hidden(portrait-tablets);
@@ -764,7 +843,7 @@ vertical-align: top;
 }
 .parallaxTop{
    @include respond("max-width: 768px") {
-   background: url(../img/tempBackground.jpg) no-repeat;
+   background: url(../img/city-scape2.jpg) no-repeat;
    min-height: 300px;
 }
 }
@@ -951,7 +1030,7 @@ vertical-align: top;
 }
 .faqs .four.columns h3 {
    @include respond("max-width: 768px") {
-      margin-left: -100%;
+      margin-left: -50%;
       font-size: 30px;
       right: 0%;
       opacity: 1;
@@ -980,16 +1059,14 @@ vertical-align: top;
    @include hidden(tablet);
    @include hidden(all-phones);
 }
-//*** TWITTER FEED STYLINGS START ***//
 
 #newsFeed{
-   overflow:hidden;
-   margin-top: 50px;
-   margin-bottom: 30px;
    ul{
-      @include row();
+      @include respond("max-width: 1068px") {
+         margin-top: 2%;
       li{ //twitter boxes
-         padding: 4%;
+         @include respond("max-width: 1068px") {
+         padding: 1%;
          background-color: white;
          min-height: 500px;
          @include column(4);
@@ -1004,52 +1081,57 @@ vertical-align: top;
       }
    }
 }
-.user a {
-   color: $darkestGray !important;
 }
-.user a span:first-of-type {
-   display:none;
-   margin-right:25px;
-   color: $darkestGray !important;
 }
-.user a span:last-of-type {
-   display: block;
-   margin-left:25px;
-   margin-top:7px;
-   font-size: 200%;
-   color: $darkestGray !important;
+#newsFeed{
+   ul{
+      @include respond("max-width: 868px") {
+         margin-top: 1%;
+      li{ //twitter boxes
+         @include respond("max-width: 868px") {
+         padding: 0%;
+         background-color: white;
+         min-height: 500px;
+         @include column(4);
+         .tweet{
+            margin-top: 25%;
+            margin-bottom: 20%;
+            overflow: hidden !important;
+            }
+         a span{
+            color: $green !important;
+         }
+      }
+   }
 }
-.tweet{
-   margin-top: 55px;
+}
+}
+#newsFeed{
+   @include respond("max-width: 768px") {
+   margin-top: 3%;
+   margin-bottom: 3%;
+   ul{
 
+
+      li{ //twitter boxes
+         margin-top: 3%;
+         padding: 5%;
+         background-color: white;
+         min-height: 200px;
+         @include column(4);
+         .tweet{
+            margin-top: 10%;
+            margin-bottom: 5%;
+            overflow: hidden !important;
+            }
+         a span{
+            color: $green !important;
+         }
+      }
+   }
 }
-.timePosted{
-   margin-left: 15px;
-   color: $darkestGray !important;
 }
-.media img{
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   max-height: 200px !important;
-   @include border-corner-radius(top, left, 5px);
-   @include border-corner-radius(top, right, 30px);
-   @include border-corner-radius(bottom, left, 30px);
-   @include border-corner-radius(bottom, right, 5px);
-}
-.user img{
-   margin-left: 15px;
-   float:left;
-}
-.user a > span {
-   float:left;
-}
-.tweet{
-   color: $darkestGray !important;
-}
-.tweet a{
-   color: $green !important;
-}
+
 #footerlogotext{
    @include respond("max-width: 768px") {
       max-width: 60%;
@@ -1059,6 +1141,11 @@ vertical-align: top;
 #footer li, #footer, #footer p{
    @include respond("max-width: 768px") {
       text-align: center !important;
+   }
+}
+#footer .four.columns.inview img{
+   @include respond("max-width: 768px") {
+      margin-left: 20px;
    }
 }
 #footer .four.columns.inview{
@@ -1086,12 +1173,23 @@ vertical-align: top;
       opacity: 1;
    }
 }
+.footLinks, .lowerFooterBox{
+   @include respond("max-width: 1168px") {
+margin-left: 3%;
+margin-right: 3%;
+   }
+}
+.footLinks, .lowerFooterBox{
+   @include respond("max-width: 768px") {
+margin-left: 0%;
+margin-right: 0%;
+   }
+}
 #odometer2, #odometer3, #odometer4, #odometer5{
    overflow: visible !important;
    font-family: $primaryFont;
    font-weight: 300;
 }
-
 //** 'EXPLORE' ARROWS AT TOP START **//
 .arrow3 {
    animation: hex-pop-in 2.5s infinite 2.5s linear;
@@ -1143,7 +1241,6 @@ a.anchor{display: block; position: relative; top: -200px; visibility: hidden;}
    background: $white;
    padding: 25px;
 }
-
 #faq ul li{
    list-style-position: inside;
    list-style-image: url(../img/lozenge.png) !important;
@@ -1164,9 +1261,8 @@ a.anchor{display: block; position: relative; top: -200px; visibility: hidden;}
    ul li{
    list-style-image: none !important;
    padding: 10px;
+   }
 }
-}
-
 #faq nav#sidebar-nav-holder.fixed{
    margin-top: 85px;
 }
