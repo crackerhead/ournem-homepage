@@ -8,6 +8,7 @@
 // GUMBY OVERRIDES END
 //**## COLOR PALLETE START ##**//
 $green: #41bf76;
+$greenLite: rgba(65,191,118,0.6);
 $white: white;
 $offWhite: #fff;
 $black: #000;
@@ -656,8 +657,19 @@ vertical-align: top;
 .tweet{
    color: $darkestGray !important;
 }
-.tweet a{
-   color: $green !important;
+.tweet a > span:before {
+   background-color: transparent !important;
+   height: 0px;
+   margin-bottom: 0px;
+}
+.tweet a > span:after {
+   background-color: blue !important;
+   height: 0px;
+   margin-bottom: 0px;
+}
+.tweet a:hover{
+   color: $greenLite !important;
+   @include transition(all .6s);
 }
 //*** TWITTER FEED STYLINGS END ***//
 #footer{
@@ -812,7 +824,6 @@ vertical-align: top;
       padding-right: 4%;
    }
 }
-
 .headline{
    @include respond("max-width: 768px") {
       max-width: 60%;
@@ -1060,78 +1071,39 @@ vertical-align: top;
    @include hidden(all-phones);
 }
 
-#newsFeed{
-   ul{
-      @include respond("max-width: 1068px") {
-         margin-top: 2%;
+#newsFeed ul{
+   @include respond("max-width: 1068px") {
+   margin-top: 2%;
       li{ //twitter boxes
-         @include respond("max-width: 1068px") {
          padding: 1%;
-         background-color: white;
-         min-height: 500px;
-         @include column(4);
-         .tweet{
-            margin-top: 25%;
-            margin-bottom: 20%;
-            overflow: hidden !important;
-            }
-         a span{
-            color: $green !important;
-         }
       }
    }
 }
-}
-}
-#newsFeed{
-   ul{
-      @include respond("max-width: 868px") {
-         margin-top: 1%;
-      li{ //twitter boxes
-         @include respond("max-width: 868px") {
+#newsFeed ul{
+   @include respond("max-width: 868px") {
+   margin-top: 1%;
+      li{
          padding: 0%;
-         background-color: white;
-         min-height: 500px;
-         @include column(4);
-         .tweet{
-            margin-top: 25%;
-            margin-bottom: 20%;
-            overflow: hidden !important;
-            }
-         a span{
-            color: $green !important;
-         }
       }
    }
-}
-}
 }
 #newsFeed{
    @include respond("max-width: 768px") {
    margin-top: 3%;
    margin-bottom: 3%;
-   ul{
-
-
-      li{ //twitter boxes
-         margin-top: 3%;
-         padding: 5%;
-         background-color: white;
-         min-height: 200px;
-         @include column(4);
-         .tweet{
-            margin-top: 10%;
-            margin-bottom: 5%;
-            overflow: hidden !important;
-            }
-         a span{
-            color: $green !important;
-         }
+   ul li{ //twitter boxes
+      margin-top: 3%;
+      padding: 5%;
+      background-color: white;
+      min-height: 200px;
+      .tweet{
+         margin-top: 10%;
+         margin-bottom: 5%;
+         overflow: hidden !important;
       }
    }
 }
 }
-
 #footerlogotext{
    @include respond("max-width: 768px") {
       max-width: 60%;
