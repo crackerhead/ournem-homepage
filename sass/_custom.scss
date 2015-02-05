@@ -11,6 +11,7 @@ $green: #41bf76;
 $greenLite: rgba(65,191,118,0.6);
 $white: white;
 $offWhite: #fff;
+$whiteBackground: #f6f6f6;
 $black: #000;
 $darkestGray: #222;
 $darkerGray: #2f2f2f;
@@ -544,7 +545,7 @@ vertical-align: top;
          text-indent:0;
          padding: 10px;
          color: $darkGray;
-         background-color: #f6f6f6;
+         background-color: $whiteBackground;
          @include border-radius(3px);
          left: -15%;
          position: relative;
@@ -600,7 +601,7 @@ vertical-align: top;
       li{ //twitter boxes
          padding: 4%;
          background-color: white;
-         min-height: 400px;
+         min-height: 430px;
          @include column(4);
          .tweet{
             margin-top: 25%;
