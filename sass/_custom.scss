@@ -1,5 +1,5 @@
 @import '../bower_components/gumby-parallax/_parallax.scss';
-// BACKGROUND IMAGES THROUGHOUT START =========
+
 // GUMBY OVERRIDES START
 .row{
    padding-left: 0px;
@@ -157,7 +157,7 @@ nav.fixed{
    background: $white;
    z-index: 10000;
    @include hidden(all-phones);
-   @include hidden(portrait-tablets);
+   @include hidden(portrait-tablet);
    height: 65px;
    .four.columns.logo{
       margin-top: -5px;
@@ -591,7 +591,6 @@ vertical-align: top;
    overflow:hidden;
    margin-top: 5%;
    margin-bottom: 70px;
-
    ul{
       margin-left: 0px !important;
       padding-left: 0px !important;
@@ -599,6 +598,7 @@ vertical-align: top;
       padding-right: 0px !important;
       @include row();
       li{ //twitter boxes
+         font-weight: 300 !important;
          padding: 4%;
          background-color: white;
          min-height: 430px;
@@ -617,6 +617,7 @@ vertical-align: top;
 .user a {
    color: $darkestGray !important;
 }
+
 .user a span:first-of-type {
    display:none;
    margin-right:25px;
@@ -624,17 +625,14 @@ vertical-align: top;
 }
 .user a span:last-of-type {
    display: block;
-   margin-left:25px;
    margin-top:7px;
    font-size: 200%;
    color: $darkestGray !important;
 }
 .tweet{
    margin-top: 55px;
-
 }
 .timePosted{
-
    margin-left: 15px;
    color: $darkestGray !important;
 }
@@ -648,9 +646,16 @@ vertical-align: top;
    @include border-corner-radius(bottom, left, 30px);
    @include border-corner-radius(bottom, right, 5px);
 }
+/*
 .user img{
    margin-left: 15px;
    float:left;
+}
+*/
+#newsFeed .user img{
+   @include hidden(desktop);
+   @include hidden(tablet);
+   @include hidden(all-phones);
 }
 .user a > span {
    float:left;
@@ -672,6 +677,7 @@ vertical-align: top;
    color: $greenLite !important;
    @include transition(all .6s);
 }
+
 //*** TWITTER FEED STYLINGS END ***//
 #footer{
    text-align: left;
@@ -817,7 +823,7 @@ vertical-align: top;
 // MOBILE STYLES START =================
 #headerSlideContainer {
    @include hidden(all-phones);
-   @include hidden(portrait-tablets);
+   @include hidden(portrait-tablet);
 }
 .navbar ul {
    @include respond("max-width: 768px") {
@@ -937,7 +943,7 @@ vertical-align: top;
    }
 }
 .mMargin{
-   @include respond(tablets) {
+   @include respond(tablet) {
       margin-top: 30px;
       margin-bottom: 70px;
    }
@@ -1065,6 +1071,7 @@ vertical-align: top;
 }
 .faqreadfaq2, .faqirc2, .faqforum2, .faqwiki2{
    @include hidden(desktop);
+   @include visible(tablet);
 }
 .faqreadfaq, .faqirc, .faqforum, .faqwiki{
    @include visible(desktop);
@@ -1074,26 +1081,36 @@ vertical-align: top;
 
 #newsFeed ul{
    @include respond("max-width: 1068px") {
-   margin-top: 2%;
+   margin-top: 4%;
       li{ //twitter boxes
-         padding: 1%;
+         padding: 3%;
       }
    }
 }
+/*
 #newsFeed ul{
    @include respond("max-width: 868px") {
-   margin-top: 1%;
+
       li{
-         padding: 0%;
+         padding: 2%;
       }
+   }
+}
+*/
+#newsFeed ul .user{
+   @include respond("max-width: 868px") {
+      margin-bottom: 20px;
    }
 }
 #newsFeed{
    @include respond("max-width: 768px") {
    margin-top: 3%;
-   margin-bottom: 3%;
+   margin-bottom: 30px;
+   margin-right: 20px;
+   margin-left: 20px;
+
    ul li{ //twitter boxes
-      margin-top: 3%;
+      margin-bottom: 3%;
       padding: 5%;
       background-color: white;
       min-height: 200px;
