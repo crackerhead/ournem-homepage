@@ -128,27 +128,26 @@ nav{
       text-align: inherit;
       .dropdown{
          margin-top: -10px;
-         margin-left: 20px;
+         margin-left: 0px;
          border-top: none;
-         max-width: 120px;
-
-         @include border-radius(4px);
+         max-width: 140px;
+         @include border-radius(2px);
          ul{
-
          li{
-
-            margin-top: -10px !important;
-            margin-bottom: -10px !important;
+            /*
+            margin-top: -8px !important;
+            margin-bottom: -8px !important;
+            */
             a{
                border: none;
             }
-         a > span:before {
-            background-color: transparent;
-            margin-bottom: 0px;
+            a > span:before {
+               background-color: transparent;
+               margin-bottom: 0px;
+            }
          }
       }
    }
-}
       li{
          min-width: 80px;
          text-align: center;
@@ -164,8 +163,6 @@ nav{
       }
    }
 }
-
-
 nav.fixed{
    width: 100%;
    background: $white;
@@ -180,7 +177,7 @@ nav.fixed{
       margin-top: 5px;
       .dropdown{
          margin-top: -10px;
-         margin-left: 20px;
+         margin-left: 0px;
       }
    }
    img{
@@ -190,23 +187,43 @@ nav.fixed{
       margin-bottom: -2px;
    }
 }
-.dropdown a > span{
+.dropdown{
    @include respond("max-width: 768px") {
-   color: $darkGray !important;
-
+      min-width: 100px;
+      max-width: 140px !important;
+      margin-left: 50% !important;
+   }
 }
-}
-.dropdown ul, .dropdown, .dropdown li{
+.dropdown ul{
    @include respond("max-width: 768px") {
-max-width: 300px;
-   background: $offWhite !important;
-   margin-left: 20%;
-   text-align: center;
+      margin-left: 300px;
+      background: $offWhite !important;
+      border: none !important;
+      min-width: 100%;
+   }
 }
+.dropdown li{
+   @include respond("max-width: 768px") {
+      min-height: 500px;
+      min-height: 20px;
+      margin-left: 300px;
+      background: $offWhite !important;
+      border: none !important;
+      min-width: 100%;
+   }
 }
-.navbar{
+.dropdown li a{
+   @include respond("max-width: 768px") {
+      min-height: 20px;
+      background: $offWhite !important;
+      text-align: left !important;
+      border: none !important;
+      min-width: 100%;
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
+   }
+}
 
-}
 i.icon-down-open-big{
    margin: 0;
 }

@@ -15,7 +15,7 @@
       "tech": "<span>DEVELOPER <i class=\"icon-down-open-big\"></i></span>",
       "update": "UPDATES",
       "lang": "<span>ENGLISH <i class=\"icon-down-open-big\"></i></span>",
-      "__comment": "lang should be the name of the translated language"
+      "__comment": "lang output should be the name of the translated language"
    },
    "clients":{
       "header1": "NEM Community Client",
