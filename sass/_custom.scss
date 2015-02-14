@@ -107,10 +107,9 @@ a:before:hover{
    background: transparent;
 }
 .gumby-no-touch .navbar ul li:hover .dropdown{
-border-top: none;
+   border-top: none;
 }
 .gumby-no-touch .navbar .dropdown ul:hover{
-
 }
 .gumby-no-touch .navbar li .dropdown ul li a:hover{
    background: transparent !important;
@@ -120,22 +119,36 @@ nav{
    height: 20%;
    padding: inherit !important;
    background-color: $white;
-   .four.columns.logo{
+   text-transform: uppercase;
+   .three.columns.logo{
       margin-top: 1.7%;
    }
-   .eight.columns{
+   .nine.columns{
       margin-top: 2.5%;
       text-align: inherit;
       .dropdown{
+         margin-top: -10px;
+         margin-left: 20px;
          border-top: none;
+         max-width: 120px;
+
+         @include border-radius(4px);
+         ul{
+
+         li{
+
+            margin-top: -10px !important;
+            margin-bottom: -10px !important;
+            a{
+               border: none;
+            }
          a > span:before {
-            margin-bottom: -2px;
+            background-color: transparent;
+            margin-bottom: 0px;
          }
-         /*
-         padding-top: 20px;
-         margin-top: 20px;
-         */
       }
+   }
+}
       li{
          min-width: 80px;
          text-align: center;
@@ -145,8 +158,9 @@ nav{
          font-weight: 500;
       }
       span:hover{
-         color: $green !important;
-         font-weight: 700;
+         @include transition(all .6s);
+            color: $green;
+         font-weight: 300;
       }
    }
 }
@@ -159,13 +173,14 @@ nav.fixed{
    @include hidden(all-phones);
    @include hidden(portrait-tablet);
    height: 65px;
-   .four.columns.logo{
+   .three.columns.logo{
       margin-top: -5px;
    }
-   .eight.columns{
+   .nine.columns{
       margin-top: 5px;
       .dropdown{
-         margin-top: 0px;
+         margin-top: -10px;
+         margin-left: 20px;
       }
    }
    img{
@@ -598,7 +613,7 @@ vertical-align: top;
       padding-right: 0px !important;
       @include row();
       li{ //twitter boxes
-         font-weight: 300 !important;
+         font-weight: 400 !important;
          padding: 4%;
          background-color: white;
          min-height: 430px;
