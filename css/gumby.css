@@ -1748,14 +1748,6 @@ nav.fixed .nine.columns .dropdown { margin-top: -10px; margin-left: 0px; }
 nav.fixed img { width: 100px; }
 nav.fixed a > span:before { margin-bottom: -2px; }
 
-@media only screen and (max-width: 768px) { .dropdown { min-width: 100px; max-width: 140px !important; margin-left: 50% !important; } }
-
-@media only screen and (max-width: 768px) { .dropdown ul { margin-left: 300px; background: white !important; border: none !important; min-width: 100%; } }
-
-@media only screen and (max-width: 768px) { .dropdown li { min-height: 500px; min-height: 20px; margin-left: 300px; background: white !important; border: none !important; min-width: 100%; } }
-
-@media only screen and (max-width: 768px) { .dropdown li a { min-height: 20px; background: white !important; text-align: left !important; border: none !important; min-width: 100%; margin-top: 0px !important; margin-bottom: 0px !important; } }
-
 i.icon-down-open-big { margin: 0; }
 
 .headline { text-align: inherit; margin-top: 30%; }
@@ -1860,17 +1852,10 @@ i.icon-down-open-big { margin: 0; }
 @media only screen and (min-width: 0px) { .testimonials .testimWrap { width: 100%; } }
 @media only screen and (min-width: 768px) { .testimonials .testimWrap { width: 33.33333%; } }
 @media only screen and (min-width: 1040px) { .testimonials .testimWrap { width: 33.33333%; } }
-.testimonials .user1 { font-size: 48px; }
-.testimonials .user2 { margin-top: 0px; }
-.testimonials .user3 { text-align: left; }
-.testimonials .user1comment { font-size: 16px; color: white; }
-.testimonials .user3comment { font-size: 16px; text-align: left; }
+.testimonials .user1, .testimonials .user2, .testimonials .user3 { font-weight: 500 !important; word-wrap: break-word; }
+.testimonials .user1comment, .testimonials .user2comment, .testimonials .user3comment { font-size: 16px; color: white; }
 
-.user1 img { width: 75px; margin-left: 20px; vertical-align: middle; -webkit-border-radius: 50px; -moz-border-radius: 50px; -ms-border-radius: 50px; -o-border-radius: 50px; border-radius: 50px; }
-
-.user2 img { width: 75px; margin-left: 20px; vertical-align: bottom; -webkit-border-radius: 50px; -moz-border-radius: 50px; -ms-border-radius: 50px; -o-border-radius: 50px; border-radius: 50px; }
-
-.user3 img { width: 75px; margin-right: 20px; vertical-align: top; -webkit-border-radius: 50px; -moz-border-radius: 50px; -ms-border-radius: 50px; -o-border-radius: 50px; border-radius: 50px; }
+.user2 img, .user1 img, .user3 img { width: 75px; margin-left: 20px; vertical-align: bottom; -webkit-border-radius: 50px; -moz-border-radius: 50px; -ms-border-radius: 50px; -o-border-radius: 50px; border-radius: 50px; }
 
 .faqs { background-color: white; color: #41bf76; margin-top: 120px; margin-bottom: 120px; }
 .faqs .four.columns { text-align: center; }
@@ -1881,27 +1866,29 @@ i.icon-down-open-big { margin: 0; }
 .faqs li i.onscreen { left: 0%; opacity: 1; -webkit-transition: all 0.6s; -moz-transition: all 0.6s; -o-transition: all 0.6s; transition: all 0.6s; -webkit-transition-timing-function: ease-out; -moz-transition-timing-function: ease-out; -o-transition-timing-function: ease-out; transition-timing-function: ease-out; -webkit-transition-delay: 0.8s; -moz-transition-delay: 0.8s; -o-transition-delay: 0.8s; transition-delay: 0.8s; }
 .faqs span { color: #41bf76; font-size: 16px; font-weight: 500; right: -15%; position: relative; opacity: 0; margin-left: 6%; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; }
 .faqs span.onscreen { right: 0%; opacity: 1; -webkit-transition: all 0.6s; -moz-transition: all 0.6s; -o-transition: all 0.6s; transition: all 0.6s; -webkit-transition-timing-function: ease-out; -moz-transition-timing-function: ease-out; -o-transition-timing-function: ease-out; transition-timing-function: ease-out; -webkit-transition-delay: 0.8s; -moz-transition-delay: 0.8s; -o-transition-delay: 0.8s; transition-delay: 0.8s; }
-.faqs a > span:hover { color: #41bf76 !important; }
-.faqs a > span:before { margin-bottom: -2px; background-color: #41bf76; }
+.faqs a > span:hover { color: rgba(65, 191, 118, 0.6) !important; -webkit-transition: all 0.6s; -moz-transition: all 0.6s; -o-transition: all 0.6s; transition: all 0.6s; -webkit-transition-timing-function: ease-out; -moz-transition-timing-function: ease-out; -o-transition-timing-function: ease-out; transition-timing-function: ease-out; -webkit-transition-delay: 0s; -moz-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; }
+.faqs a > span:before { margin-bottom: -2px; background-color: transparent; }
 
 #newsFeed { overflow: hidden; margin-top: 5%; margin-bottom: 70px; }
 #newsFeed ul { margin-left: 0px !important; padding-left: 0px !important; margin-right: 0px !important; padding-right: 0px !important; width: 100%; max-width: 1080px; min-width: 320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
 #newsFeed ul > *:first-child { margin-left: 0; }
 @media only screen and (max-width: 767px) { #newsFeed ul { width: auto; min-width: 0; margin-left: 0; margin-right: 0; } }
-#newsFeed ul li { font-weight: 400 !important; padding: 4%; background-color: white; min-height: 430px; width: 32.05128%; }
+#newsFeed ul li { font-weight: 300 !important; padding: 4%; background-color: white; min-height: 430px; width: 32.05128%; }
 @media only screen and (max-width: 767px) { #newsFeed ul li { float: left; margin-left: 0; width: 100%; } }
-#newsFeed ul li .tweet { margin-top: 25%; margin-bottom: 20%; overflow: hidden !important; }
-#newsFeed ul li a span { color: #41bf76 !important; }
+#newsFeed ul li .tweet { font-weight: 300; margin-top: 25%; margin-bottom: 20%; overflow: hidden !important; }
+#newsFeed ul li a span { font-weight: 300; color: #41bf76 !important; }
 
-.user a { color: #222222 !important; }
+/*
+.user a { color: $darkestGray !important; font-weight: 700;
+}
+*/
+.user a span:first-of-type { display: none; margin-right: 25px; color: #222222 !important; font-weight: 500 !important; }
 
-.user a span:first-of-type { display: none; margin-right: 25px; color: #222222 !important; }
+.user a span:last-of-type { display: block; margin-top: 7px; font-size: 200%; color: #222222 !important; font-weight: 500 !important; }
 
-.user a span:last-of-type { display: block; margin-top: 7px; font-size: 200%; color: #222222 !important; }
+.tweet { margin-top: 85px; }
 
-.tweet { margin-top: 55px; }
-
-.timePosted { margin-left: 15px; color: #222222 !important; }
+.timePosted { margin-left: 15px; color: #222222 !important; font-weight: 300; }
 
 .media img { display: block; margin-left: auto; margin-right: auto; max-height: 200px !important; -moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; border-top-left-radius: 5px; -moz-border-radius-topright: 30px; -webkit-border-top-right-radius: 30px; border-top-right-radius: 30px; -moz-border-radius-bottomleft: 30px; -webkit-border-bottom-left-radius: 30px; border-bottom-left-radius: 30px; -moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px; }
 
@@ -1913,7 +1900,7 @@ i.icon-down-open-big { margin: 0; }
 @media only screen and (tablet) { #newsFeed .user img { display: none !important; } }
 @media only screen and (max-width: 767px) { #newsFeed .user img { display: none !important; } }
 
-.user a > span { float: left; }
+.user a > span { float: left; font-weight: 300; }
 
 .tweet { color: #222222 !important; }
 
@@ -1964,121 +1951,6 @@ i.icon-down-open-big { margin: 0; }
 }
 */
 /* BUTTON STYLING END */
-@media only screen and (max-width: 767px) { #headerSlideContainer { display: none !important; } }
-@media only screen and (portrait-tablet) { #headerSlideContainer { display: none !important; } }
-
-@media only screen and (max-width: 768px) { .navbar ul { background: white; padding-right: 4%; } }
-
-@media only screen and (max-width: 768px) { .headline { max-width: 60%; margin: 0 auto; margin-top: 10%; } }
-@media only screen and (max-width: 668px) { .headline { max-width: 70%; margin: 0 auto; margin-top: 10%; } }
-@media only screen and (max-width: 568px) { .headline { max-width: 80%; margin: 0 auto; margin-top: 10%; } }
-@media only screen and (max-width: 468px) { .headline { max-width: 90%; margin: 0 auto; margin-top: 10%; } }
-
-@media only screen and (max-width: 768px) { .parallax1 { min-height: 560px; } }
-
-@media only screen and (max-width: 768px) { .parallaxTop { background: url(../img/city-scape2.jpg) no-repeat; min-height: 300px; } }
-
-@media only screen and (max-width: 768px) { .thirdParty { text-align: right; margin-bottom: 50px; margin-top: 20px; padding: 20px; }
-  .thirdParty h3 { font-weight: 700; }
-  .thirdParty p { margin-left: 16%; font-weight: 300; text-align: right; } }
-
-@media only screen and (max-width: 768px) { .modContent { margin-right: 15px; float: right; } }
-
-@media only screen and (min-width: 768px) { .hideDesktop { display: none !important; } }
-.hideDesktop img { width: 40%; overflow: hidden; float: right; }
-
-@media only screen and (tablet) { .laptop { display: none !important; } }
-@media only screen and (max-width: 767px) { .laptop { display: none !important; } }
-
-@media only screen and (max-width: 768px) { .mainClient { width: 400px; padding: 20px; overflow: hidden; } }
-
-@media only screen and (max-width: 468px) { .mainClient { width: 400px; padding: 0px; overflow: hidden; } }
-
-@media only screen and (max-width: 668px) { .mainClient h3, .thirdParty h3 { font-size: 20px; } }
-
-@media only screen and (max-width: 988px) { .mainClient { text-align: left; margin-top: 10%; } }
-@media only screen and (max-width: 888px) { .mainClient { text-align: left; margin-top: 7%; } }
-
-@media only screen and (max-width: 768px) { .clientTextSlide { position: relative; left: -0%; opacity: 1; } }
-
-@media only screen and (max-width: 768px) { .thirdParty { position: relative; right: 0%; opacity: 1; } }
-
-@media only screen and (tablet) { .mMargin { margin-top: 30px; margin-bottom: 70px; } }
-@media only screen and (max-width: 767px) { .mMargin { margin-top: 30px; margin-bottom: 70px; } }
-
-@media only screen and (max-width: 768px) { .joined { min-height: 200px; padding-top: 30px; } }
-
-@media only screen and (max-width: 768px) { .four.columns.border { margin-top: 30px; margin-left: 20px; margin-right: 20px; } }
-
-@media only screen and (max-width: 768px) { .purchase .three_up, .purchase .ten.columns p { text-align: center !important; } }
-
-@media only screen and (max-width: 768px) { .otherXchange a img { margin-top: 20px; margin-bottom: 20px; } }
-
-/*
-.otherXchange{ @include respond("max-width: 768px") { padding-bottom: 40px; }
-}
-*/
-@media only screen and (max-width: 768px) { .user1 { padding-left: 50px !important; padding-top: 5%; padding-bottom: 2%; text-align: right !important; } }
-
-@media only screen and (max-width: 768px) { .user2 { padding-left: 150px !important; padding-top: 5%; padding-bottom: 2%; text-align: right !important; } }
-
-@media only screen and (max-width: 768px) { .user3 { padding-left: 50px !important; padding-top: 5%; padding-bottom: 2%; text-align: right !important; } }
-
-@media only screen and (max-width: 768px) { .user1comment { padding-left: 50px !important; padding-right: 100px !important; padding-bottom: 5%; text-align: right; } }
-
-@media only screen and (max-width: 768px) { .user3comment { padding-left: 50px !important; padding-right: 100px !important; padding-bottom: 5%; text-align: right; } }
-
-.faqs { margin-left: 10%; margin-right: 5%; }
-
-@media only screen and (max-width: 768px) { .faqs .four.columns .valign:before { height: 60px; margin-top: 80px; margin-left: 80px; } }
-
-@media only screen and (max-width: 768px) { .faqs .eight.columns .valign:before { height: 240px; margin-bottom: 40px; margin-top: 0px; padding-top: 0px; } }
-
-@media only screen and (max-width: 768px) { .faqs .four.columns h3 { margin-left: -50%; font-size: 30px; right: 0%; opacity: 1; margin-bottom: -30%; } }
-
-@media only screen and (max-width: 768px) { .faqs span { position: relative; right: 0%; opacity: 1; } }
-
-@media only screen and (max-width: 768px) { .faqs li i { position: relative; left: 0%; opacity: 1; } }
-
-@media only screen and (min-width: 768px) { .faqreadfaq2, .faqirc2, .faqforum2, .faqwiki2 { display: none !important; } }
-@media only screen and (tablet) { .faqreadfaq2, .faqirc2, .faqforum2, .faqwiki2 { display: inherit !important; } }
-
-@media only screen and (min-width: 768px) { .faqreadfaq, .faqirc, .faqforum, .faqwiki { display: inherit !important; } }
-@media only screen and (tablet) { .faqreadfaq, .faqirc, .faqforum, .faqwiki { display: none !important; } }
-@media only screen and (max-width: 767px) { .faqreadfaq, .faqirc, .faqforum, .faqwiki { display: none !important; } }
-
-@media only screen and (max-width: 1068px) { #newsFeed ul { margin-top: 4%; }
-  #newsFeed ul li { padding: 3%; } }
-
-/*
-#newsFeed ul{ @include respond("max-width: 868px") {
- li{ padding: 2%; } }
-}
-*/
-@media only screen and (max-width: 868px) { #newsFeed ul .user { margin-bottom: 20px; } }
-
-@media only screen and (max-width: 768px) { #newsFeed { margin-top: 3%; margin-bottom: 30px; margin-right: 20px; margin-left: 20px; }
-  #newsFeed ul li { margin-bottom: 3%; padding: 5%; background-color: white; min-height: 200px; }
-  #newsFeed ul li .tweet { margin-top: 10%; margin-bottom: 5%; overflow: hidden !important; } }
-
-@media only screen and (max-width: 768px) { #footerlogotext { max-width: 60%; margin: 0 auto; } }
-
-@media only screen and (max-width: 768px) { #footer li, #footer, #footer p { text-align: center !important; } }
-
-@media only screen and (max-width: 768px) { #footer .four.columns.inview img { margin-left: 20px; } }
-
-@media only screen and (max-width: 768px) { #footer .four.columns.inview { margin-top: 40px; } }
-
-@media only screen and (max-width: 768px) { .lowerFooter .socialFooter { margin-bottom: 10px; margin-top: 10px; text-align: center; } }
-
-@media only screen and (max-width: 768px) { .lowerFooter .license { margin-bottom: 10px; text-align: center; } }
-
-@media only screen and (max-width: 768px) { .footLinks .four.columns { right: 0%; position: relative; opacity: 1; } }
-
-@media only screen and (max-width: 1168px) { .footLinks, .lowerFooterBox { margin-left: 3%; margin-right: 3%; } }
-
-@media only screen and (max-width: 768px) { .footLinks, .lowerFooterBox { margin-left: 0%; margin-right: 0%; } }
-
 #odometer2, #odometer3, #odometer4, #odometer5 { overflow: visible !important; font-family: "Roboto"; font-weight: 300; }
 
 .arrow3 { animation: hex-pop-in 2.5s infinite 2.5s linear; -webkit-animation: hex-pop-in 2.5s infinite 2.5s linear; }
@@ -2145,3 +2017,118 @@ a.anchor { display: block; position: relative; top: -200px; visibility: hidden; 
 .floatRight { float: right; margin-left: 15px; -webkit-box-shadow: #555555 2px 2px 4px; -moz-box-shadow: #555555 2px 2px 4px; box-shadow: #555555 2px 2px 4px; }
 
 .floatLeft { float: left; -webkit-box-shadow: #555555 2px 2px 4px; -moz-box-shadow: #555555 2px 2px 4px; box-shadow: #555555 2px 2px 4px; }
+
+@media only screen and (max-width: 768px) { .dropdown { min-width: 100px; max-width: 140px !important; margin-left: 50% !important; } }
+
+@media only screen and (max-width: 768px) { .dropdown ul { margin-left: 300px; background: white !important; border: none !important; min-width: 100%; } }
+
+@media only screen and (max-width: 768px) { .dropdown li { min-height: 500px; min-height: 20px; margin-left: 300px; background: white !important; border: none !important; min-width: 100%; } }
+
+@media only screen and (max-width: 768px) { .dropdown li a { min-height: 20px; background: white !important; text-align: left !important; border: none !important; min-width: 100%; margin-top: 0px !important; margin-bottom: 0px !important; } }
+
+@media only screen and (max-width: 767px) { #headerSlideContainer { display: none !important; } }
+@media only screen and (portrait-tablet) { #headerSlideContainer { display: none !important; } }
+
+@media only screen and (max-width: 768px) { .navbar ul { background: white; padding-right: 4%; } }
+
+@media only screen and (max-width: 768px) { .headline { max-width: 60%; margin: 0 auto; margin-top: 10%; } }
+@media only screen and (max-width: 668px) { .headline { max-width: 70%; margin: 0 auto; margin-top: 10%; } }
+@media only screen and (max-width: 568px) { .headline { max-width: 80%; margin: 0 auto; margin-top: 10%; } }
+@media only screen and (max-width: 468px) { .headline { max-width: 90%; margin: 0 auto; margin-top: 10%; } }
+
+@media only screen and (max-width: 768px) { .parallax1 { min-height: 560px; } }
+
+@media only screen and (max-width: 768px) { .parallaxTop { background: url(../img/city-scape2.jpg) no-repeat; min-height: 300px; } }
+
+@media only screen and (max-width: 768px) { .thirdParty { text-align: right; margin-bottom: 50px; margin-top: 20px; padding: 20px; }
+  .thirdParty h3 { font-weight: 700; }
+  .thirdParty p { margin-left: 16%; font-weight: 300; text-align: right; } }
+
+@media only screen and (max-width: 768px) { .modContent { margin-right: 15px; float: right; } }
+
+@media only screen and (min-width: 768px) { .hideDesktop { display: none !important; } }
+.hideDesktop img { width: 40%; overflow: hidden; float: right; }
+
+@media only screen and (tablet) { .laptop { display: none !important; } }
+@media only screen and (max-width: 767px) { .laptop { display: none !important; } }
+
+@media only screen and (max-width: 768px) { .mainClient { width: 400px; padding: 20px; overflow: hidden; } }
+
+@media only screen and (max-width: 468px) { .mainClient { width: 400px; padding: 0px; overflow: hidden; } }
+
+@media only screen and (max-width: 668px) { .mainClient h3, .thirdParty h3 { font-size: 20px; } }
+
+@media only screen and (max-width: 988px) { .mainClient { text-align: left; margin-top: 10%; } }
+@media only screen and (max-width: 888px) { .mainClient { text-align: left; margin-top: 7%; } }
+
+@media only screen and (max-width: 768px) { .clientTextSlide { position: relative; left: -0%; opacity: 1; } }
+
+@media only screen and (max-width: 768px) { .thirdParty { position: relative; right: 0%; opacity: 1; } }
+
+@media only screen and (tablet) { .mMargin { margin-top: 30px; margin-bottom: 70px; } }
+@media only screen and (max-width: 767px) { .mMargin { margin-top: 30px; margin-bottom: 70px; } }
+
+@media only screen and (max-width: 768px) { .joined { min-height: 200px; padding-top: 30px; } }
+
+@media only screen and (max-width: 768px) { .four.columns.border { margin-top: 30px; margin-left: 20px; margin-right: 20px; } }
+
+@media only screen and (max-width: 768px) { .purchase .three_up, .purchase .ten.columns p { text-align: center !important; } }
+
+@media only screen and (max-width: 768px) { .otherXchange a img { margin-top: 20px; margin-bottom: 20px; } }
+
+@media only screen and (max-width: 768px) { .user1 { padding-left: 50px !important; padding-top: 5%; padding-bottom: 4%; text-align: left !important; } }
+
+@media only screen and (max-width: 768px) { .user1comment { padding-left: 50px !important; padding-right: 100px !important; padding-bottom: 5%; text-align: left !important; } }
+
+@media only screen and (max-width: 767px) { .testimonials .user2, .testimonials .user3, .testimonials .user2comment, .testimonials .user3comment { display: none !important; } }
+@media only screen and (max-width: 768px) { .testimonials .user2, .testimonials .user3, .testimonials .user2comment, .testimonials .user3comment { display: none !important; } }
+
+.faqs { margin-left: 10%; margin-right: 5%; }
+
+@media only screen and (max-width: 768px) { .faqs .four.columns .valign:before { height: 60px; margin-top: 80px; margin-left: 80px; } }
+
+@media only screen and (max-width: 768px) { .faqs .eight.columns .valign:before { height: 240px; margin-bottom: 40px; margin-top: 0px; padding-top: 0px; } }
+
+@media only screen and (max-width: 768px) { .faqs .four.columns h3 { margin-left: -50%; font-size: 30px; right: 0%; opacity: 1; margin-bottom: -30%; } }
+
+@media only screen and (max-width: 768px) { .faqs span { position: relative; right: 0%; opacity: 1; } }
+
+@media only screen and (max-width: 768px) { .faqs li i { position: relative; left: 0%; opacity: 1; } }
+
+@media only screen and (min-width: 768px) { .faqreadfaq2, .faqirc2, .faqforum2, .faqwiki2 { display: none !important; } }
+@media only screen and (tablet) { .faqreadfaq2, .faqirc2, .faqforum2, .faqwiki2 { display: inherit !important; } }
+
+@media only screen and (min-width: 768px) { .faqreadfaq, .faqirc, .faqforum, .faqwiki { display: inherit !important; } }
+@media only screen and (tablet) { .faqreadfaq, .faqirc, .faqforum, .faqwiki { display: none !important; } }
+@media only screen and (max-width: 767px) { .faqreadfaq, .faqirc, .faqforum, .faqwiki { display: none !important; } }
+
+@media only screen and (max-width: 1068px) { #newsFeed ul { margin-top: 4%; } }
+
+/*
+#newsFeed ul{ @include respond("max-width: 868px") {
+ li{ padding: 2%; } }
+}
+*/
+@media only screen and (max-width: 868px) { #newsFeed ul .user { margin-bottom: 20px; } }
+
+@media only screen and (max-width: 768px) { #newsFeed { margin-top: 3%; margin-bottom: 30px; margin-right: 20px; margin-left: 20px; }
+  #newsFeed ul li { margin-bottom: 3%; padding: 5%; background-color: white; min-height: 200px; }
+  #newsFeed ul li .tweet { margin-top: 10%; margin-bottom: 5%; overflow: hidden !important; } }
+
+@media only screen and (max-width: 768px) { #footerlogotext { max-width: 60%; margin: 0 auto; } }
+
+@media only screen and (max-width: 768px) { #footer li, #footer, #footer p { text-align: center !important; } }
+
+@media only screen and (max-width: 768px) { #footer .four.columns.inview img { margin-left: 20px; } }
+
+@media only screen and (max-width: 768px) { #footer .four.columns.inview { margin-top: 40px; } }
+
+@media only screen and (max-width: 768px) { .lowerFooter .socialFooter { margin-bottom: 10px; margin-top: 10px; text-align: center; } }
+
+@media only screen and (max-width: 768px) { .lowerFooter .license { margin-bottom: 10px; text-align: center; } }
+
+@media only screen and (max-width: 768px) { .footLinks .four.columns { right: 0%; position: relative; opacity: 1; } }
+
+@media only screen and (max-width: 1168px) { .footLinks, .lowerFooterBox { margin-left: 3%; margin-right: 3%; } }
+
+@media only screen and (max-width: 768px) { .footLinks, .lowerFooterBox { margin-left: 0%; margin-right: 0%; } }

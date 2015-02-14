@@ -9,8 +9,9 @@
       "fifth": "3"
    },
    "nav":{
-      "client": "NEM CLIENT",
-      "buy": "BUY NEM",
+      "client": "CLIENT",
+      "buy": "BUY XEM",
+      "newsletter": "NEWSLETTER",
       "faq": "FAQ's",
       "tech": "<span>DEVELOPER <i class=\"icon-down-open-big\"></i></span>",
       "update": "UPDATES",

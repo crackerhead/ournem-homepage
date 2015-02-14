@@ -1,5 +1,4 @@
 @import '../bower_components/gumby-parallax/_parallax.scss';
-
 // GUMBY OVERRIDES START
 .row{
    padding-left: 0px;
@@ -187,43 +186,6 @@ nav.fixed{
       margin-bottom: -2px;
    }
 }
-.dropdown{
-   @include respond("max-width: 768px") {
-      min-width: 100px;
-      max-width: 140px !important;
-      margin-left: 50% !important;
-   }
-}
-.dropdown ul{
-   @include respond("max-width: 768px") {
-      margin-left: 300px;
-      background: $offWhite !important;
-      border: none !important;
-      min-width: 100%;
-   }
-}
-.dropdown li{
-   @include respond("max-width: 768px") {
-      min-height: 500px;
-      min-height: 20px;
-      margin-left: 300px;
-      background: $offWhite !important;
-      border: none !important;
-      min-width: 100%;
-   }
-}
-.dropdown li a{
-   @include respond("max-width: 768px") {
-      min-height: 20px;
-      background: $offWhite !important;
-      text-align: left !important;
-      border: none !important;
-      min-width: 100%;
-      margin-top: 0px !important;
-      margin-bottom: 0px !important;
-   }
-}
-
 i.icon-down-open-big{
    margin: 0;
 }
@@ -506,43 +468,22 @@ z-index: 160;
       font-weight: 300;
       @include fancytiles(3,3,1);
    }
-   .user1{
-      font-size: $xxlarge;
+   .user1, .user2, .user3{
+      font-weight: 500 !important;
+      word-wrap:break-word;
    }
-   .user2{
-      margin-top: 0px;
-   }
-   .user3{
-      text-align: left;
-
-   }
-   .user1comment{
+   .user1comment, .user2comment, .user3comment{
       font-size: $norm;
       color: $white;
-   }
-.user3comment{
-   font-size: $norm;
-   text-align: left;
 }
 }
-.user1 img{
-   width: 75px;
-margin-left: 20px;
-vertical-align: middle;
-   @include border-radius(50px);
-}
-.user2 img{
+.user2 img, .user1 img, .user3 img{
    width: 75px;
 margin-left: 20px;
 vertical-align: bottom;
    @include border-radius(50px);
 }
-.user3 img{
-   width: 75px;
-margin-right: 20px;
-vertical-align: top;
-   @include border-radius(50px);
-}
+
 //TESTIMONIALS END HERE
 .faqs{
    background-color: $white;
@@ -610,11 +551,14 @@ vertical-align: top;
       @include transition-delay(.8s);
    }
    a > span:hover {
-      color: $green !important;
+      color: $greenLite !important;
+      @include transition(all .6s);
+      @include transition-timing-function(ease-out);
+      @include transition-delay(0s);
    }
    a > span:before {
       margin-bottom: -2px;
-      background-color: $green;
+      background-color: transparent;
    }
 }
 //*** TWITTER FEED STYLINGS START ***//
@@ -623,6 +567,7 @@ vertical-align: top;
    overflow:hidden;
    margin-top: 5%;
    margin-bottom: 70px;
+
    ul{
       margin-left: 0px !important;
       padding-left: 0px !important;
@@ -630,43 +575,50 @@ vertical-align: top;
       padding-right: 0px !important;
       @include row();
       li{ //twitter boxes
-         font-weight: 400 !important;
+         font-weight: 300 !important;
          padding: 4%;
          background-color: white;
          min-height: 430px;
          @include column(4);
          .tweet{
+            font-weight: 300;
             margin-top: 25%;
             margin-bottom: 20%;
             overflow: hidden !important;
             }
          a span{
+            font-weight: 300;
             color: $green !important;
          }
       }
    }
 }
+/*
 .user a {
    color: $darkestGray !important;
+   font-weight: 700;
 }
-
+*/
 .user a span:first-of-type {
    display:none;
    margin-right:25px;
    color: $darkestGray !important;
+   font-weight: 500 !important;
 }
 .user a span:last-of-type {
    display: block;
    margin-top:7px;
    font-size: 200%;
    color: $darkestGray !important;
+   font-weight: 500 !important;
 }
 .tweet{
-   margin-top: 55px;
+   margin-top: 85px;
 }
 .timePosted{
    margin-left: 15px;
    color: $darkestGray !important;
+   font-weight: 300;
 }
 .media img{
    display: block;
@@ -691,6 +643,7 @@ vertical-align: top;
 }
 .user a > span {
    float:left;
+   font-weight: 300;
 }
 .tweet{
    color: $darkestGray !important;
@@ -851,362 +804,7 @@ vertical-align: top;
 }
 */
 /* BUTTON STYLING END */
-// MOBILE STYLES START =================
-// MOBILE STYLES START =================
-#headerSlideContainer {
-   @include hidden(all-phones);
-   @include hidden(portrait-tablet);
-}
-.navbar ul {
-   @include respond("max-width: 768px") {
-      background: $white;
-      padding-right: 4%;
-   }
-}
-.headline{
-   @include respond("max-width: 768px") {
-      max-width: 60%;
-      margin: 0 auto;
-      margin-top: 10%;
-   }
-   @include respond("max-width: 668px") {
-      max-width: 70%;
-      margin: 0 auto;
-      margin-top: 10%;
-   }
-   @include respond("max-width: 568px") {
-      max-width: 80%;
-      margin: 0 auto;
-      margin-top: 10%;
-   }
-   @include respond("max-width: 468px") {
-      max-width: 90%;
-      margin: 0 auto;
-      margin-top: 10%;
-   }
-}
 
-.parallax1{
-   @include respond("max-width: 768px") {
-      min-height: 560px;
-   }
-}
-.parallaxTop{
-   @include respond("max-width: 768px") {
-   background: url(../img/city-scape2.jpg) no-repeat;
-   min-height: 300px;
-}
-}
-.thirdParty{
-   @include respond("max-width: 768px") {
-      text-align: right;
-      margin-bottom: 50px;
-      margin-top: 20px;
-      padding: 20px;
-      h3{
-         font-weight: 700;
-      }
-      p{
-         margin-left: 16%;
-         font-weight: 300;
-         text-align: right;
-      }
-   }
-}
-.modContent{
-   @include respond("max-width: 768px") {
-      margin-right: 15px;
-      float: right;
-   }
-}
-.hideDesktop{
-   @include hidden(desktop);
-   img{
-      width: 40%;
-      overflow: hidden;
-      float: right;
-   }
-}
-.laptop{
-   @include hidden(tablet);
-   @include hidden(all-phones);
-}
-.mainClient{
-   @include respond("max-width: 768px") {
-      width: 400px;
-      padding: 20px;
-      overflow: hidden;
-   }
-}
-.mainClient{
-   @include respond("max-width: 468px") {
-      width: 400px;
-      padding: 0px;
-      overflow: hidden;
-   }
-}
-.mainClient h3, .thirdParty h3{
-   @include respond("max-width: 668px") {
-      font-size: 20px;
-   }
-}
-.mainClient{
-   @include respond("max-width: 988px") {
-      text-align: left;
-      margin-top: 10%;
-   }
-   @include respond("max-width: 888px") {
-      text-align: left;
-      margin-top: 7%;
-   }
-}
-.clientTextSlide{
-   @include respond("max-width: 768px") {
-      position: relative;
-      left: -0%;
-      opacity: 1;
-   }
-}
-.thirdParty{
-   @include respond("max-width: 768px") {
-      position: relative;
-      right: 0%;
-      opacity: 1;
-   }
-}
-.mMargin{
-   @include respond(tablet) {
-      margin-top: 30px;
-      margin-bottom: 70px;
-   }
-   @include respond(all-phones) {
-      margin-top: 30px;
-      margin-bottom: 70px;
-   }
-}
-
-.joined{
-   @include respond("max-width: 768px") {
-      min-height: 200px;
-      padding-top: 30px;
-   }
-}
-.four.columns.border{
-   @include respond("max-width: 768px") {
-      margin-top: 30px;
-      margin-left: 20px;
-      margin-right: 20px;
-   }
-}
-.purchase .three_up, .purchase .ten.columns p{
-   @include respond("max-width: 768px") {
-      text-align: center !important;
-   }
-}
-.otherXchange a img{
-   @include respond("max-width: 768px") {
-      margin-top: 20px;
-      margin-bottom: 20px;
-
-   }
-}
-/*
-.otherXchange{
-   @include respond("max-width: 768px") {
-      padding-bottom: 40px;
-   }
-}
-*/
-.user1 {
-   @include respond("max-width: 768px") {
-      padding-left: 50px !important;
-      padding-top: 5%;
-      padding-bottom: 2%;
-      text-align: right !important;
-   }
-}
-.user2 {
-   @include respond("max-width: 768px") {
-      padding-left: 150px !important;
-      padding-top: 5%;
-      padding-bottom: 2%;
-      text-align: right !important;
-   }
-}
-.user3 {
-   @include respond("max-width: 768px") {
-      padding-left: 50px !important;
-      padding-top: 5%;
-      padding-bottom: 2%;
-      text-align: right !important;
-   }
-}
-.user1comment {
-   @include respond("max-width: 768px") {
-      padding-left: 50px !important;
-      padding-right: 100px !important;
-
-      padding-bottom: 5%;
-      text-align: right;
-   }
-}
-.user3comment {
-   @include respond("max-width: 768px") {
-      padding-left: 50px !important;
-      padding-right: 100px !important;
-
-      padding-bottom: 5%;
-      text-align: right;
-   }
-}
-.faqs{
-   margin-left: 10%;
-   margin-right: 5%;
-}
-.faqs .four.columns .valign:before {
-   @include respond("max-width: 768px") {
-      height: 60px;
-      margin-top: 80px;
-      margin-left: 80px;
-   }
-}
-.faqs .eight.columns .valign:before {
-   @include respond("max-width: 768px") {
-      height: 240px;
-      margin-bottom: 40px;
-      margin-top: 0px;
-      padding-top: 0px;
-   }
-}
-.faqs .four.columns h3 {
-   @include respond("max-width: 768px") {
-      margin-left: -50%;
-      font-size: 30px;
-      right: 0%;
-      opacity: 1;
-      margin-bottom: -30%;
-   }
-}
-.faqs span{
-   @include respond("max-width: 768px") {
-   position: relative;
-   right: 0%;
-   opacity: 1;
-   }
-}
-.faqs li i{
-   @include respond("max-width: 768px") {
-   position: relative;
-   left: 0%;
-   opacity: 1;
-   }
-}
-.faqreadfaq2, .faqirc2, .faqforum2, .faqwiki2{
-   @include hidden(desktop);
-   @include visible(tablet);
-}
-.faqreadfaq, .faqirc, .faqforum, .faqwiki{
-   @include visible(desktop);
-   @include hidden(tablet);
-   @include hidden(all-phones);
-}
-
-#newsFeed ul{
-   @include respond("max-width: 1068px") {
-   margin-top: 4%;
-      li{ //twitter boxes
-         padding: 3%;
-      }
-   }
-}
-/*
-#newsFeed ul{
-   @include respond("max-width: 868px") {
-
-      li{
-         padding: 2%;
-      }
-   }
-}
-*/
-#newsFeed ul .user{
-   @include respond("max-width: 868px") {
-      margin-bottom: 20px;
-   }
-}
-#newsFeed{
-   @include respond("max-width: 768px") {
-   margin-top: 3%;
-   margin-bottom: 30px;
-   margin-right: 20px;
-   margin-left: 20px;
-
-   ul li{ //twitter boxes
-      margin-bottom: 3%;
-      padding: 5%;
-      background-color: white;
-      min-height: 200px;
-      .tweet{
-         margin-top: 10%;
-         margin-bottom: 5%;
-         overflow: hidden !important;
-      }
-   }
-}
-}
-#footerlogotext{
-   @include respond("max-width: 768px") {
-      max-width: 60%;
-      margin: 0 auto;
-   }
-}
-#footer li, #footer, #footer p{
-   @include respond("max-width: 768px") {
-      text-align: center !important;
-   }
-}
-#footer .four.columns.inview img{
-   @include respond("max-width: 768px") {
-      margin-left: 20px;
-   }
-}
-#footer .four.columns.inview{
-   @include respond("max-width: 768px") {
-      margin-top: 40px;
-   }
-}
-.lowerFooter .socialFooter {
-   @include respond("max-width: 768px") {
-      margin-bottom: 10px;
-      margin-top: 10px;
-      text-align: center;
-  }
-}
-.lowerFooter .license {
-   @include respond("max-width: 768px") {
-      margin-bottom: 10px;
-      text-align: center;
-  }
-}
-.footLinks .four.columns{
-   @include respond("max-width: 768px") {
-      right: 0%;
-      position: relative;
-      opacity: 1;
-   }
-}
-.footLinks, .lowerFooterBox{
-   @include respond("max-width: 1168px") {
-margin-left: 3%;
-margin-right: 3%;
-   }
-}
-.footLinks, .lowerFooterBox{
-   @include respond("max-width: 768px") {
-margin-left: 0%;
-margin-right: 0%;
-   }
-}
 #odometer2, #odometer3, #odometer4, #odometer5{
    overflow: visible !important;
    font-family: $primaryFont;
@@ -1244,7 +842,10 @@ margin-right: 0%;
 //** 'EXPLORE' ARROWS AT TOP END **//
 a.anchor{display: block; position: relative; top: -200px; visibility: hidden;}
 //** ^^^^^^ part of arrow animation ^?
+
+//** ####################### **//
 //** FAQ.HTML PAGE CSS START **//
+//** ####################### **//
 #faq .headline{
    height: 30% !important;
    margin-top: 5%;
@@ -1369,3 +970,4 @@ a.anchor{display: block; position: relative; top: -200px; visibility: hidden;}
    @include box-shadow($gray 2px 2px 4px);
 }
 //  FAQ.HTML PAGE END =======================
+@import '_mobile.scss';
